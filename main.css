@@ -1,0 +1,133 @@
+*{
+    background-color: white;
+    color:black;
+}
+
+/* pequeno */
+@media(min-width: 300px)
+{
+    .gta{
+        grid-template-areas: 
+        "cab"
+        "menu"
+        "cont"
+        "jaba"
+        "rod"
+        ;
+        grid-template-rows: 100px 40px;
+        grid-template-columns: 300px;
+        gap:10px;
+    }
+}
+
+/* Médio */
+@media(min-width: 600px)
+{
+    .gta{
+        grid-template-areas: 
+        "cab cab"
+        "menu menu"
+        "cont jaba"
+        "rod rod"
+        ;
+        grid-template-rows: 100px 40px auto auto 60px;
+        grid-template-columns: 400px 200px;
+        gap:10px;
+    }
+}
+
+/* grande */
+@media(min-width: 900px)
+{
+    .gta{
+        grid-template-areas: 
+        "cab cab cab"
+        "menu menu menu"
+        "cont cont jaba"
+        "rod rod rod"
+        ;
+        grid-template-rows: 100px 40px auto 60px ;
+        grid-template-columns: 350px 350px 200px;
+        gap:10px;
+    }
+}
+
+.pai{
+    display: grid;
+}
+
+.cab{
+    grid-area: cab;
+    background-color: #141CA8;
+}
+
+.menu{
+    grid-area: menu;
+    background-color: chartreuse;
+}
+
+.not{
+    grid-area: not;
+    background-color: peachpuff;
+}
+
+.cont{
+    grid-area: cont;
+    background-color: coral;
+}
+
+.jaba{
+    grid-area: jaba;
+    background-color: aqua;
+}
+
+.rod{
+    grid-area: rod;
+    background-color: #8718A8;
+}
+
+a, a:visited, a:active a:hover{
+    text-decoration: none;
+    color: unset;
+}
+
+.card1 *:hover{
+    filter: brightness(134%);
+}
+
+.card1{
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    max-width: 800px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.escola{
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.escola1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card1tit{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.card1txt{
+    font-size: 1rem;
+    color: #555;
+}
