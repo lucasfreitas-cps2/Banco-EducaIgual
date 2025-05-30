@@ -1,0 +1,130 @@
+@media(min-width:1px){
+
+/*Class que modifica o pai*/
+.pai{
+/*altera o display do site*/
+    display: flex;
+    flex-direction:column;
+}
+/*Class que modifica o body*/
+body {
+ /*Remove a margin*/
+    margin: 0;
+/*Remove o padding*/
+    padding: 0;
+}
+/*Class que modifica os filhos*/
+.filho{
+    font-family: Arial;
+}
+
+/*Class que modifica o cabeçario*/
+.cab{
+/*Cor de fundo*/
+    background-color: #4295ff;    
+    height: 68px;
+/*Remove o padding*/
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+/*Class que modifica a logo que está no header*/
+.img2{
+/*Modifica a largura*/
+    width: 150px;
+/*Modifica o posicionamento*/
+    margin-top: 8px;
+    margin-left: 1350px;
+    
+}
+
+
+/*Class que modifica o Quem somos nós*/
+.quem{
+/*Remove o padding*/
+    padding-top: 0px;
+    padding-right: 0px;
+/*Cor de fundo*/
+    background-color: #EEC3FB;
+/*Modifica o posicionamento*/
+    margin-right: 325px;
+    margin-left: 0;
+    margin-top: 80px;
+/*Modifica altura*/
+    height: 600px;
+/*Modifica a Borda*/
+    Border: 4px solid rgba(66, 149, 255, 0.5);
+    border-radius: 30px;
+/*Modifica a largura*/
+    width: 900px;
+}
+/*Class que modifica o contato*/
+.contatos{
+/*Posicionamento*/
+    margin-left:1100px;
+    margin-top: 65px;
+    margin-bottom: 25px;
+/*Cor de fundo do contato*/
+    background-color: #888EF0;
+/*Tamanho do contato*/
+    width: 310px;
+    height: 150px;
+/*Borda do contato*/
+    border: 4px solid rgba(238, 195, 251, 0.4);
+    border-radius: 30px;
+/*Centralizar texto*/
+    justify-content: center;
+    text-align: center; 
+    align-items: center;
+    
+}
+
+/*Class que modifica o titulo dos Quem somos nós*/
+.nós{
+/*Modifica o tamanho da fonte*/
+    font-size: 18px;
+}
+
+/*Class que modifica o texto do Quem somos nós*/
+.Lorem{
+/*Modifica o tamanho da fonte*/    
+    font-size: 15px;
+}
+
+/*Class que modifica a logo que fica na tela principal*/
+.img1{
+/*Modifica o tamanho da imagem*/
+    width: 450px;
+/*Modifica o posicionamento da imagem*/
+    margin-left: 1025px;
+    margin-top: -525px;
+    margin-bottom: 0px;
+}
+
+/*Class que modifica o footer*/
+.f{
+/*Modifica a cor de fundo*/
+    background-color: #E48CFF;
+/*Modifica altura*/
+    height: 50px;           
+}
+
+/*Class que modifica a logo do footer*/
+.img3{
+/*Modifica a largura*/
+    width: 125px;
+/*Modifica o posicionamento*/
+    margin-bottom: -10px;
+    margin-right: 0px;
+}
+
+/*Class que modifica o texto de direotos autorais*/
+.direitos{
+/*Modifica o posicionamento*/
+    margin-left: 1200px;
+    margin-bottom: -30px;
+/*Modifica o tamanho da fonte*/    
+    font-size: 13px;
+}
+}
+
