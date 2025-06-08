@@ -1,97 +1,191 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-body {
+body{
   font-family: 'Montserrat', Arial, Verdana, sans-serif;
-  background-color: #EAEFF9;
+  background-color: #f8f6f6;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
-header, footer {
-  width: 100%;
-  background-color: #4295FF;
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.cabecalho {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  background-color: #5272ff18;
+  border-radius: 5px;
 }
 
-footer {
-  background-color: #E48CFF;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+/* padrão (mobile-first) */
+.cabecalho {
+  grid-template-areas:
+    "logo"
+    "busca"
+    "actions"
+    "menu";
+  grid-template-columns: 1fr;
 }
 
-.navbar, .footer {
+/* Telas médias */
+@media (min-width: 600px) {
+  .cabecalho {
+    grid-template-areas:
+      "logo busca"
+      "actions menu";
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Telas grandes */
+@media (min-width: 900px) {
+  .cabecalho {
+    grid-template-areas:
+      "logo busca actions menu";
+    grid-template-columns: 260px 1fr auto auto;
+  }
+}
+
+/* Atribuição das áreas */
+.logo {
+  grid-area: logo;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
 
-.direita, .footer img.esquerda {
-  height: 40px;
+}
+/*padronizando a logo*/
+.logo img {
+  min-width: 160px;
   max-width: 100%;
 }
-
+.container-busca {
+   grid-area: busca;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  max-width: 600px; /* limite de largura */
+  width: 100%;
+  margin: 0 auto; /* centraliza se tiver espaço */
+}
+/*estilização area interna busca*/
+.container-busca input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+/*estilo do botão (lupinha)*/
+.container-busca button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/*pra deixar a area de cadastro arrumada*/
+.actions {
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+/*design do botão*/
+.cadastro-btn {
+  background-color: #cba4f9;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+/*deixando o menu na direita da pag*/
 .menu-icon {
-  color: white;
-  font-size: 28px;
+  grid-area: menu;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-icon i {
+  font-size: 2rem;
   cursor: pointer;
 }
 
+/* Área principal do conteúdo */
+.conteudo {
+  display: grid;
+  grid-template-areas:
+    "titulo"
+    "cards";
+  gap: 1rem;
+  padding: 2rem;
+}
+
+/* Responsivo para telas maiores */
+@media (min-width: 600px) {
+  .conteudo {
+    grid-template-areas:
+      "titulo titulo"
+      "cards cards";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.titulo {
+  grid-area: titulo;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+/* Estilização da área de Cadastro */
 .content-wrapper {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  min-height: 80vh;
+  padding: 2rem;
 }
 
 .container {
-  background-color: #EAEFF9;
+  background: white;
   padding: 2rem;
-  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   max-width: 400px;
-  margin-top: 50px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-h2 {
+.form-box h1 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
 .input-group {
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-label {
-  display: block;
+.input-group label {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-input {
-  width: 100%;
-  padding: 0.625rem;
-  background-color: #D288E6;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1rem;
-  box-sizing: border-box;
+.input-group input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
 }
 
-input::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+.btn{
+  border-radius: 5px;
+  
 }
 
-.btn {
-  display: block;
-  background-color: #6844d4;
-  color: white;
-  padding: 0.625rem;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 1re
-}
+
