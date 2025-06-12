@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EducaLivre</title>
   <link rel="stylesheet" href="index.css">
-  <!--Font awesome para os ícones-->
+  <!-- Font awesome para os ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!--Fonte Montserrat-->
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- Fonte Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 <header class="cabecalho">
   <div class="logo">
-    <img src="/img/Logo que fica no header.png" alt="logotipo EducaLivre">
+    <img src="/img/Logo que fica no header.png" alt="Logotipo EducaLivre">
   </div>
   <div class="container-busca">
     <input type="text" placeholder="Encontre uma Instituição">
-    <button><i class="fas fa-search"></i></button>
+    <button aria-label="Buscar instituição"><i class="fas fa-search"></i></button>
   </div>
   <div class="actions">
     <span>Torne-se Um Avaliador!</span>
@@ -31,40 +31,92 @@
 
 <main class="conteudo">
   <h1 class="titulo">Instituições de Destaque</h1>
+
   <section class="cards">
     <div class="container-cards">
-         <div class="instituicao-card">
 
-  <img src="https://img.freepik.com/vetores-gratis/cena-do-edificio-da-escola-grande_1308-32058.jpg?semt=ais_hybrid&w=740" alt="Imagem da escola" class="imagem-escola" />
-  <div class="info-escola">
+      <div class="instituicao-card">
+        <img src="https://img.freepik.com/vetores-gratis/cena-do-edificio-da-escola-grande_1308-32058.jpg?semt=ais_hybrid&w=740" alt="Fachada da escola E.E MAURICIO DE SOUZA" class="imagem-escola" />
+        <div class="info-escola">
+          <h2 class="nome-escola">E.E MAURICIO DE SOUZA</h2>
+        </div>
+        <div class="nota">
+          <i class="fa-solid fa-book-open" style="color: #0a2f52;"></i>
+          <span class="valor">4.78</span>
+        </div>
+      </div>
 
-    <h3 class="nome-escola">E.E MAURICIO DE SOUZA</h3>
+      <div class="instituicao-card">
+        <img src="https://img.freepik.com/vetores-gratis/cena-do-edificio-da-escola-grande_1308-32058.jpg?semt=ais_hybrid&w=740" alt="Fachada da escola E.M ANTONIO FAGUNDES" class="imagem-escola" />
+        <div class="info-escola">
+          <h2 class="nome-escola">E.M ANTONIO FAGUNDES</h2>
+        </div>
+        <div class="nota">
+          <i class="fa-solid fa-book-open" style="color: #0a2f52;"></i>
+          <span class="valor">4.78</span>
+        </div>
+      </div>
+
+      <div class="instituicao-card">
+        <img src="https://img.freepik.com/vetores-gratis/cena-do-edificio-da-escola-grande_1308-32058.jpg?semt=ais_hybrid&w=740" alt="Fachada da escola E.E LIBERDADE DO SABER" class="imagem-escola" />
+        <div class="info-escola">
+          <h2 class="nome-escola">E.E LIBERDADE DO SABER</h2>
+        </div>
+        <div class="nota">
+          <i class="fa-solid fa-book-open" style="color: #0a2f52;"></i>
+          <span class="valor">4.78</span>
+        </div>
+      </div>
+
+      <div class="instituicao-card">
+        <img src="https://img.freepik.com/vetores-gratis/cena-do-edificio-da-escola-grande_1308-32058.jpg?semt=ais_hybrid&w=740" alt="Fachada da escola E.E SOLANGE MOURA" class="imagem-escola" />
+        <div class="info-escola">
+          <h2 class="nome-escola">E.E SOLANGE MOURA</h2>
+        </div>
+        <div class="nota">
+          <i class="fa-solid fa-book-open" style="color: #0a2f52;"></i>
+          <span class="valor">4.78</span>
+        </div>
+      </div>
+      <section class="avaliacoes-recentes">
+  <h2>Avaliações Recentes</h2>
+
+  <div class="avaliacao-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Avatar do usuário" class="avatar">
+    <div class="avaliacao-conteudo">
+      <div class="topo">
+        <strong>Junior6432</strong>
+        <span class="tag">Aluno</span>
+      </div>
+      <p class="comentario">“Essa Foi a melhor escola que eu já estudei!”</p>
+      <p class="escola">E.E Prof Francisco Cisco</p>
+      </div>
+    </div>
   </div>
 
-  <div class="nota">
-    <i class="fa-solid fa-book-open" style="color: #0a2f52;"></i>
-    <span class="valor">4.78</span>
+  <div class="avaliacao-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Avatar do usuário" class="avatar">
+    <div class="avaliacao-conteudo">
+      <div class="topo">
+        <strong>Maria_123</strong>
+        <span class="tag">Ex-Aluno</span>
+      </div>
+      <p class="comentario">
+        “Concluí meu Ensino Médio nessa instituição, bons professores, mas precisa de melhorias na questão de igualdade racial”
+      </p>
+      <p class="escola">E.E Prof Antônio Ferreira</p>
+      
+      </div>
+    </div>
   </div>
+</section>
 
     </div>
- <hr>
-    <div class="container-cards">
-         <div class="instituicao-card">
-
-  <img src="https://img.freepik.com/vetores-gratis/cena-do-edificio-da-escola-grande_1308-32058.jpg?semt=ais_hybrid&w=740" alt="Imagem da escola" class="imagem-escola" />
-  <div class="info-escola">
-
-    <h3 class="nome-escola">E.M ANTONIO FAGUNDES</h3>
-  </div>
-
-  <div class="nota">
-    <i class="fa-solid fa-book-open" style="color: #0a2f52;"></i>
-    <span class="valor">4.78</span>
-  </div>
-
-    </div>
+   
   </section>
 </main>
-
+<footer>
+  
+</footer>
 </body>
 </html>
