@@ -175,7 +175,7 @@ body {
   margin: 0 0 8px 0;
   font-size: 1rem;
 }
-
+/*ainda não está em uso, é pra quando for colocar os selos*/
 .selos {
   display: flex;
   gap: 10px;
@@ -198,7 +198,82 @@ body {
   right: 25px;
   color: #1e1e2f;
 }
-
+/* tamanho do icone livro*/
 .nota i {
   font-size: 1rem;
 }
+
+/* Estilo da seção de avaliações */
+.avaliacoes-recentes {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.avaliacoes-recentes h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Cada avaliação em forma de cartão */
+.avaliacao-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #e7eaff;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+/* Foto/avatar do usuário */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* Área de conteúdo da avaliação */
+.avaliacao-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Nome e tag de tipo de usuário */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topo strong {
+  font-size: 1.1rem;
+}
+
+/* Tag como "Aluno", "Ex-Aluno" etc */
+.tag {
+  background-color: #c6cfff;
+  padding: 0.2rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Comentário */
+.comentario {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0.3rem 0;
+}
+
+/* Nome da escola */
+.escola {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Nota com ícone ficarão aqui, favor adicionar*/
