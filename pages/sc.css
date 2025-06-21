@@ -1,130 +1,271 @@
-@media(min-width:1px){
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/*Class que modifica o pai*/
-.pai{
-/*altera o display do site*/
-    display: flex;
-    flex-direction:column;
-}
-/*Class que modifica o body*/
 body {
- /*Remove a margin*/
-    margin: 0;
-/*Remove o padding*/
-    padding: 0;
-}
-/*Class que modifica os filhos*/
-.filho{
-    font-family: Arial;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #f8f6f6c2;
+  margin: 0;
 }
 
-/*Class que modifica o cabeçario*/
-.cab{
-/*Cor de fundo*/
-    background-color: #4295ff;    
-    height: 68px;
-/*Remove o padding*/
-    padding-bottom: 0px;
-    padding-top: 0px;
+.cabecalho {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  background-color: #5272ff18;
+  border-radius: 5px;
+  grid-template-areas:
+    "logo"
+    "busca"
+    "actions"
+    "menu";
+  grid-template-columns: 1fr;
 }
 
-/*Class que modifica a logo que está no header*/
-.img2{
-/*Modifica a largura*/
-    width: 150px;
-/*Modifica o posicionamento*/
-    margin-top: 8px;
-    margin-left: 1350px;
-    
+@media (min-width: 600px) {
+  .cabecalho {
+    grid-template-areas:
+      "logo busca"
+      "actions menu";
+    grid-template-columns: 2fr 1fr;
+  }
 }
 
+@media (min-width: 900px) {
+  .cabecalho {
+    grid-template-areas:
+      "logo busca actions menu";
+    grid-template-columns: 260px 1fr auto auto;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  min-width: 160px;
+  max-width: 100%;
+}
+
+.container-busca {
+  grid-area: busca;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-busca input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.container-busca button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.actions {
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cadastro-btn {
+  background-color: #cba4f9;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.menu-icon {
+  grid-area: menu;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-icon i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  .conteudo {
+    grid-template-areas:
+      "titulo titulo"
+      "cards cards";
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 /*Class que modifica o Quem somos nós*/
-.quem{
-/*Remove o padding*/
-    padding-top: 0px;
-    padding-right: 0px;
-/*Cor de fundo*/
-    background-color: #EEC3FB;
-/*Modifica o posicionamento*/
-    margin-right: 325px;
-    margin-left: 0;
-    margin-top: 80px;
-/*Modifica altura*/
-    height: 600px;
-/*Modifica a Borda*/
-    Border: 4px solid rgba(66, 149, 255, 0.5);
-    border-radius: 30px;
-/*Modifica a largura*/
-    width: 900px;
-}
-/*Class que modifica o contato*/
-.contatos{
-/*Posicionamento*/
-    margin-left:1100px;
-    margin-top: 65px;
-    margin-bottom: 25px;
-/*Cor de fundo do contato*/
-    background-color: #888EF0;
-/*Tamanho do contato*/
-    width: 310px;
-    height: 150px;
-/*Borda do contato*/
-    border: 4px solid rgba(238, 195, 251, 0.4);
-    border-radius: 30px;
-/*Centralizar texto*/
-    justify-content: center;
-    text-align: center; 
-    align-items: center;
-    
+/* Estilo da seção SOBRE NÓS */
+/* Container externo que alinha caixa de texto e logo lado a lado */
+.sobre-nos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
 }
 
-/*Class que modifica o titulo dos Quem somos nós*/
-.nós{
-/*Modifica o tamanho da fonte*/
-    font-size: 18px;
+/* Caixa azul com o texto */
+.sobre-box {
+  background-color: #94bdf4;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  flex: 1;
+  color: #000;
+  text-align: center;
 }
 
-/*Class que modifica o texto do Quem somos nós*/
-.Lorem{
-/*Modifica o tamanho da fonte*/    
-    font-size: 15px;
+.sobre-box h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-/*Class que modifica a logo que fica na tela principal*/
-.img1{
-/*Modifica o tamanho da imagem*/
-    width: 450px;
-/*Modifica o posicionamento da imagem*/
-    margin-left: 1025px;
-    margin-top: -525px;
-    margin-bottom: 0px;
+.sobre-box h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  text-align: center;
 }
 
-/*Class que modifica o footer*/
-.f{
-/*Modifica a cor de fundo*/
-    background-color: #E48CFF;
-/*Modifica altura*/
-    height: 50px;           
+.sobre-box a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.email-contato{
+    text-align: center;
+}
+/* Logo ao lado */
+.sobre-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
-/*Class que modifica a logo do footer*/
-.img3{
-/*Modifica a largura*/
-    width: 125px;
-/*Modifica o posicionamento*/
-    margin-bottom: -10px;
-    margin-right: 0px;
+.sobre-logo img {
+  max-width: 220px;
+  width: 100%;
 }
 
-/*Class que modifica o texto de direotos autorais*/
-.direitos{
-/*Modifica o posicionamento*/
-    margin-left: 1200px;
-    margin-bottom: -30px;
-/*Modifica o tamanho da fonte*/    
-    font-size: 13px;
-}
+/* Responsivo: lado a lado em telas maiores */
+@media (min-width: 768px) {
+  .sobre-nos-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .sobre-box {
+    text-align: left;
+  }
 }
 
+
+
+
+
+
+.rodape {
+  background-color: #5272ff53;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.rodape-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+}
+
+.rodape-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape-links li {
+  margin-bottom: 0.3rem;
+}
+
+.rodape-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.rodape-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .rodape-conteudo {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+    justify-content: space-between;
+
+  }
+}
+
+/* estilo do botão de ir pro começo da pagina*/
+.voltar-topo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0a2f52;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.voltar-topo i {
+  font-size: 0.9rem;
+  justify-content: end;
+}
+
+.voltar-topo:hover {
+  color: #2121cc;
+  text-decoration: underline;
+}

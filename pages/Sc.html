@@ -10,26 +10,66 @@
 <!-- Onde começa a div class "pai" -->  
 <div class="pai">
 <!-- header, onde fica o cabeçario e a logo (Não consegui colocar o nav bar🥲) -->
-<header class="filho cab">
-    <img src="/img/Logo que fica no header.png" class = "img2">
+ <header class="cabecalho">
+  <div class="logo">
+    <img src="/img/Logo que fica no header.png" alt="logotipo EducaLivre">
+  </div>
+  <div class="container-busca">
+    <input type="text" placeholder="Encontre uma Instituição">
+    <button><i class="fas fa-search"></i></button>
+  </div>
+  <div class="actions">
+    <span>Torne-se Um Avaliador!</span>
+    <button onclick="window.location.href='cadastro.html' " class="cadastro-btn">Cadastro</button>
+  </div>
+  <div class="menu-icon">
+    <i class="fas fa-bars"></i>
+  </div>
 </header>
 <!-- Conteudo, onde fica tudo do quem somos nós -->
-<cont class="filho quem">
-    <h2 class="nós">Quem somos nós</h2>
-    <p class="Lorem">Somos um grupo de estudandes da FATEC MATÃO - Luiz Marchesan, Desenvolvemos este projeto cujo tema é Educação de Qualidade com o Subtema Igualdade de gênero , tendo como objetivo criar um espaço onde nossos usuários se sintam confortaveis em realizar avaliações sobre instituições ou encontrar um ambiente de estudos onde se sintam acolhidos.</p>
-</cont>
-<img src="/img/Logo que fica na pagina.png" class = "img1">
-<logo class="filho logo"></logo>
-<!-- Contatos, Onde fica os contatos -->
-<conta class="filho contatos">
-    <h2 class="conta">Contatos</h2>
-    <p class="email">Educalivre@fatec.sp.gov.br</p>
-</conta>
+<!-- Seção SOBRE NÓS -->
+<!-- Seção SOBRE NÓS -->
+<section class="sobre-nos-container">
+  <div class="sobre-box">
+    <h2>SOBRE NÓS</h2>
+    <p>
+      Somos um grupo de estudantes da FATEC MATÃO - Luiz Marchesan. Desenvolvemos este projeto cujo tema é
+      Educação de Qualidade com o Subtema Igualdade de Gênero, tendo como objetivo criar um espaço onde nossos
+      usuários se sintam confortáveis em realizar avaliações sobre instituições ou encontrar um ambiente de estudos
+      onde se sintam acolhidos.
+    </p>
+    <h3>Contatos:</h3>
+   <p class="email-contato">
+  <a href="mailto:educalivre@gmail.com">educalivre@gmail.com</a>
+</p>
+
+  </div>
+
+  <div class="sobre-logo">
+    <img src="/img/Logo que fica na pagina.png" alt="Logo Educa Livre">
+  </div>
+</section>
+
 <!-- Footer, onde fica a logo e "os direitos reservados" -->
-<footer class="filho f"> 
-    <h4 class = "direitos">EducaLivre Todos os direitos reservados 2025-2028</h4>
-    <img src="/img/Logo que fica em baixo.png" class = "img3">
-</footer>
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+
+
+      <p>&copy; 2025 EducaLivre</p>
+
+
+      <div class="rodape-links">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="/pages/Sc.html">Sobre nós</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+      <a href="#" class="voltar-topo">
+        <i class="fas fa-chevron-up"></i> Voltar ao topo
+      </a>
+    </div>
+  </footer>
 </div>
 </body>
 </html>
