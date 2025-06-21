@@ -1,31 +1,30 @@
 CREATE DATABASE BDEduca;
 USE BDEduca;
 
-CREATE TABLE funcao (
+CREATE TABLE tipo (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    funcao VARCHAR(40)
-);
-
-CREATE TABLE usuarios (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nome_usuario VARCHAR(65) NOT NULL,
-    email VARCHAR(255) UNIQUE,
-    senha VARCHAR(255),
-    funcao_id INT,
-    FOREIGN KEY (funcao_id) REFERENCES funcao(id)
-);
-
-CREATE TABLE instituicoes (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,
-    endereco VARCHAR(300)
+    tipo VARCHAR(40)
 );
 
 CREATE TABLE selos (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50)
 );
-
+CREATE TABLE usuarios (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR (70) NOT NULL,
+email VARCHAR (255) NOT NULL UNIQUE,
+senha VARCHAR (260) NOT NULL,
+tipo_id INT,
+FOREIGN KEY (tipo_id) REFERENCES tipo(id)
+);
+CREATE TABLE instituicoes(
+   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    rua VARCHAR(300),
+    bairro VARCHAR(300),
+    numero CHAR(4)
+);
 CREATE TABLE instituicao_selos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     instituicao_id INT NOT NULL,
@@ -61,5 +60,4 @@ GROUP BY
     i.id, i.nome
 ORDER BY 
     media_avaliacoes DESC, total_avaliacoes DESC;
-
 
