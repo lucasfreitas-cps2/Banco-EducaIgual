@@ -61,3 +61,5 @@ GROUP BY
     i.id, i.nome
 ORDER BY 
     media_avaliacoes DESC, total_avaliacoes DESC;
+
+
