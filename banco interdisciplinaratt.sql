@@ -61,3 +61,4 @@ GROUP BY
 ORDER BY 
     media_avaliacoes DESC, total_avaliacoes DESC;
 
+-- alterar e testar --
